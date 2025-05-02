@@ -354,7 +354,7 @@ function createLabelAcademic(){
     //label Data Inicio // Término
     const newDate = document.createElement('label')
     newDate.setAttribute('id','newDate')
-    newDate.textContent = 'Data Início // Término: '
+    newDate.textContent = 'Ano Início // Término: '
     academic.appendChild(newDate)
 
     //input Data Início 
