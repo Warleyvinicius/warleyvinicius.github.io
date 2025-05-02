@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Certificado Online</title>
+
+    <!--Link para salvar em PDF-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" ></script>
+
+
+<link href="gerador.css" rel="stylesheet"/>
+<script src="gerador.js" defer></script>
+
+</head>
+<body>
+    <h1 id="mainTitle">Gerador de Curriculum</h1>
+<form id="form">
+    <div id="main">
+        
+        <div id="adress"> 
+
+            Nome: <input  type="text" id="myName"  placeholder="Digite seu Nome Completo" required> <br>
+            Endereço: <input  type="text" id="myAdress"  placeholder="Rua" required ><br>
+            Número: <input  type="number" id="number" placeholder="N°" required>
+            Complemento: <input type="text" id="typeComplement" placeholder="Casa , Apto , Bloco..." ><br>
+            Bairro: <input  type="text" id="neighborhood" placeholder="Bairro" required><br>
+            Cidade: <input  type="local" id="city" placeholder="Cidade" required>
+            Estado: <input type="text" id="state" ><br>
+            CEP:<input type='number' id="cep" placeholder="00000" > - <input type="number" id="cep2" placeholder="000"><br>
+            Telefone: <input  id="tell" type="tel" placeholder="DDD + Telefone" required><br>
+            Email:<input type="email" id="email" placeholder="Email" required><br>
+            Categoria CNH: <input type="text" id="cnh">
+        </div>
+
+
+     
+
+        <div id="objective">
+            <h2 id="subTitulo">Objetivo:</h2>
+                <div>
+                    <textarea id="objectiveText" name="objetivo" placeholder="Digite seu Objetivo Profissional"></textarea>
+                </div>
+        </div>
+
+        <h2 id="subTitulo">Experiência Profissional</h2>
+        <div id="experience">
+            
+            <containner id="newExp" class="newExp"></containner>
+            <div class="buttons" id="buttons">
+                <button type="button" value="myJob"  id="myJob">Emprego Atual</button>    
+                <button type="button" value="addExp" id="addExp">Adicionar Experiencia</button>
+              
+            </div>  
+        </div>   
+
+        <div id="academica">
+            <h2 id="subTitulo">Informação Acadêmica</h2>
+            
+
+            <containner id="newSch">
+             
+            </containner>
+                <div id="btts">
+                   
+                    <button value="addExp" id="adc"> Adicionar Formação</button>
+                </div>
+
+        </div>
+
+      
+        <div id="adicionais">
+            <h2 id="informacaoAdc">Informações Complementares</h2>
+               
+                <ul id="addInfAdc">
+                    
+                
+                 </ul>
+            <button  id="addInfo">Adicionar Experiência</button>
+    
+        </div>
+    
+    </div>
+
+
+
+    <button type="button" id="view" onclick="document.body.style.backgroundColor = 'white'" >Visualizar Curriculum</button>
+    <button type="submit" id="generate">Gerar Curriculum em PDF</button>
+<form id="previewPDF" method=>
+    <div id ='preview' class="hide">
+
+            <span id="previewName"></span>   
+        <containner id="contAdress">
+
+            <span id="previewAdress"></span> 
+            <span id="previewNumber"></span>
+            <span id="previewtypeComplement"></span>
+            
+        </containner>   
+
+        <containner id="cityNeigh">   
+            <span id="previewNeighborhood"></span>
+            <span id="previewCity"> </span>
+            <span id="previewState"></span>
+        </containner>    
+        
+        <containner>
+            <span id="previewCep"></span>
+            <span id="previewTell"></span>
+            <span id="previewEmail"></span>
+            <span id="previewCnh"></span>
+        </containner>    
+
+        <h3 id="titleObjective">Objetivo Profissional</h3>
+            <span id="previewObjective"></span>
+
+        <div id="experienceJob" class="curriculum_secao">
+            <h3 id=experiencePreview>Experiencia Profissional</h3>
+        <div id="MyJob">
+
+            <span id="previewExperience"></span>
+            <span id="previewFunction"></span>
+            <span id="previewActivity"></span>
+            <span id="previewDate"></span>
+            
+        </div>
+        </div>
+
+        <div id="lastExp_" class="curriculum_secao">
+            <span id="previewLastExperience_1"></span>
+            <span id="previewLastFunction_1"></span>
+            <span id="previewLastActivity_1"></span>
+            <span id="previewLastDate_1"></span>
+        </div>
+
+        <div id="lastExp_" class="curriculum_secao">
+            <span id="previewLastExperience_2"></span>
+            <span id="previewLastFunction_2"></span>
+            <span id="previewLastActivity_2"></span>
+            <span id="previewLastDate_2"></span>
+            <span id='previewLastDateEnd_2'></span>
+        </div>
+
+        <div id="lastExp_" class="curriculum_secao">
+            <span id="previewLastExperience_3"></span>
+            <span id="previewLastFunction_3"></span>
+            <span id="previewLastActivity_3"></span>
+            <span id="previewLastDate_3"></span>
+            <span id='previewLastDateEnd_3'></span>
+        </div>
+
+        <div id="lastExp_" class="curriculum_secao">
+            <span id="previewLastExperience_4"></span>
+            <span id="previewLastFunction_4"></span>
+            <span id="previewLastActivity_4"></span>
+            <span id="previewLastDate_4"></span>
+            <span id='previewLastDateEnd_4'></span>
+        </div>
+
+        <div id="escolaridade" class="curriculum_secao">
+            <h3 id=academicFormation>Formação Acadêmica</h3>
+        <div id = 'school'>
+
+            <span id="formation_1"></span> 
+            <span id ='school_1'></span>
+            <span id='datInicio_1'></span> 
+            <span id='cursando_1'></span>  
+        
+        <div class="curriculum_secao">
+            <span id="formation_2"></span> 
+            <span id ='school_2'></span>
+            <span id='datInicio_2'></span> 
+            <span id='cursando_2'></span> 
+        </div>
+
+        <div class="curriculum_secao">
+            <span id="formation_3"></span> 
+            <span id ='school_3'></span>
+            <span id='datInicio_3'></span> 
+            <span id='cursando_3'></span> 
+        </div>
+
+        <div class="curriculum_secao">
+            <span id="formation_4"></span> 
+            <span id ='school_4'></span>
+            <span id='datInicio_4'></span> 
+            <span id='cursando_4'></span> 
+        </div>
+
+        <div class="curriculum_secao">
+            <span id="formation_5"></span> 
+            <span id ='school_5'></span>
+            <span id='datInicio_5'></span> 
+            <span id='cursando_5'></span> 
+        </div>
+
+        <div class="curriculum_secao">
+            <span id="formation_6"></span> 
+            <span id ='school_6'></span>
+            <span id='datInicio_6'></span> 
+            <span id='cursando_6'></span> 
+        </div>
+
+        <div class="curriculum_secao">
+            <span id="formation_7"></span> 
+            <span id ='school_7'></span>
+            <span id='datInicio_7'></span> 
+            <span id='cursando_7'></span> 
+        </div>
+
+        <div class="curriculum_secao">
+            <span id="formation_8"></span> 
+            <span id ='school_8'></span>
+            <span id='datInicio_8'></span> 
+            <span id='cursando_8'></span> 
+        </div> 
+
+        <div class="curriculum_secao">
+            <span id="formation_9"></span> 
+            <span id ='school_9'></span>
+            <span id='datInicio_9'></span> 
+            <span id='cursando_9'></span> 
+        </div>
+
+        <div class="curriculum_secao">
+            <span id="formation_10"></span> 
+            <span id ='school_10'></span>
+            <span id='datInicio_10'></span> 
+            <span id='cursando_10'></span> 
+        </div>
+
+        <div id="inf.Adc" class="curriculum_secao">
+            <h3 id=academicFormation>Informações Complementares</h3>
+        <div id = 'inf'>
+
+        <div class ="curriculum_secao">
+            <span id ='inf_1'></span>
+        </div>
+
+        <div class="curriculum_secao">
+            <span id ='inf_2'></span>
+        </div>
+        
+        <div class="curriculum_secao">
+            <span id ='inf_3'></span>
+        </div>
+        
+        <div class="curriculum_secao">
+            <span id ='inf_4'></span>
+        </div>
+        
+        <div class="curriculum_secao">
+            <span id ='inf_5'></span>
+        </div>
+        
+        <div class="curriculum_secao">
+            <span id ='inf_6'></span>
+        </div>
+        
+        <div class="curriculum_secao">
+            <span id ='inf_7'></span>
+        </div>
+        
+        <div class="curriculum_secao">
+            <span id ='inf_8'></span>
+        </div>
+        
+        <div class="curriculum_secao">
+            <span id ='inf_9'></span>
+        </div>
+        
+        <div class="curriculum_secao">
+            <span id ='inf_10'></span>
+        </div>
+    
+
+        </div>
+ 
+ 
+
+
+</div>
+    </form> 
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+
+
+
+  <!--<div id="skills">
+            <h2 id="subTitulo">Habilidades e Competências</h2>
+                <ul>
+                    <li>
+                        <input type="text">
+                    </li>
+        
+                <button value="addSkill" id="AddSkills">Adicionar Experiencia</button>        
+                </ul>
+        </div>
+        -->
