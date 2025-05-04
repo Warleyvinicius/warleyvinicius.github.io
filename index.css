@@ -327,18 +327,209 @@ padding-left: 0.25%;
   
 
  @media(max-width:450px){
-    #quizzContainer {
+  
 
-        border:none;
+    /*Campo Informações Pessoais*/    
+    
+    #myName,#myAdress,#neighborhood,#city{
         width: 100%;
+        height: 20px;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 15px;
+
+        
+    }
+    #number{
+        width: 18%;
+        display:list-item;
+        height: 20px;
+        font-size: 15px;
+        margin-bottom: 10px;
 
     }
-  
-    #answers-box button {
-      width: 100%;
+
+    #typeComplement{
+        display: inline-block;
+        width: 100%;
+        height: 20px;
+        margin-bottom: 15px;
+        font-size: 15px;
     }
-  
-    #score-container {
-      width: 90%;
+
+    #state{
+        width: 15%;
+        display:inline-block;
+        margin-bottom: 10px;
+        font-size: 15px;
+
     }
-  }  
+
+    #cep{
+        width: 25%;
+        height: 20px;
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 15px;
+
+
+    }
+    #cep2{
+        width: 15%;
+        height: 20px;
+        display: inline-block;
+        font-size: 15px;
+
+    }
+    #tell{
+        width: 50%;
+        height: 20px;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 15px;
+
+    }
+    #email{
+        width: 100%;
+        height: 20px;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+    #cnh{
+        width: 10%;
+        display:inline-block;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    /*Objetivo Profissional*/
+
+    #objectiveText{
+        width: 100%;
+        height: 4cm;
+        font-size: 16px;
+    }
+
+    /*Experiencia Atual*/
+
+    #empresa,#cargo{
+        width: 100%;
+        height: 20px;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    #Atividade{
+        display: block;
+    }
+
+    #atividade{
+        width: 100%;
+        height: 4cm;
+        font-size: 16px;
+        display: block;
+        font-size: 16px;
+        margin-bottom: 10px;
+
+
+    }
+
+    #dataInicio{
+        width: 45%;
+        height: 20px;
+        font-size: 15px;
+        margin-bottom: 10px;
+
+    }
+    #removerMyJob{
+        height: 30px;
+        font-size: 12px;
+        margin:auto;
+        margin-top: 3px;
+    }
+
+
+    /*Experiencias Profissionais*/
+
+    [id^= empresa_],[id^= cargo_]  {
+        width: 100%;
+        height: 20px;
+        font-size: 15px;
+        margin-top: 1px;
+        margin-bottom: 10px;
+
+        }
+
+    [id^= atividade_]{
+        width: 100%;
+        height: 4cm;
+        font-size: 16px;
+        display: block;
+        font-size: 16px;
+        margin-bottom: 10px;
+
+    }
+
+    [id^= dataInicio_],[id^=dataTermino_] {
+        width: 40%;
+        height: 20px;
+        font-size: 14px;
+    }
+
+
+    /*Informação Academica*/
+
+    [id^= inputAcademic_],[id^= inputForm_]{
+        width: 100%;
+        height: 20px;
+        font-size: 15px;
+        margin-top: 1px;
+        margin-bottom: 10px;
+    }
+    [id^= startDate_],[id^= endDate_]{
+        width: 40%;
+        height: 20px;
+        font-size: 16px;
+    }
+
+    [id^= checkbox_]{
+        width: 14px;
+        height: 14px;
+        justify-content: left;
+    }
+
+
+    /*Informações Complementares*/
+
+    [id^= infoAdc_]{
+        width: 100%;
+        height: 20px;
+        font-size: 15px;
+    }
+
+    #view,#generate{
+        font-size: 15px;
+        height: 20px;
+        margin-bottom: 12px;
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(221, 221, 218);
+
+    }
+
+
+    /*Campo Hide*/
+
+    #previewName{
+        text-align: center;
+    }
+
+     #contAdress{
+        display: inline-block;
+        align-items: center;
+        text-align: center;
+        justify-items: center; 
+    }
+
+}  
