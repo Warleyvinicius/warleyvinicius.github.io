@@ -550,7 +550,7 @@ padding-left: 0.25%;
     }
 
      #contAdress{
-        display: inline-block;
+        display: block;
         align-items: center;
         text-align: center;
         justify-items: center; 
