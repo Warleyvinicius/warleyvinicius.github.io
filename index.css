@@ -11,8 +11,8 @@ body{
 
 /*Titulo Principal*/
 #mainTitle{
-    text-align: center;
-    text-shadow: 2px 2px 7px rgb(116, 94, 175);     /*Sombreamento do Texto*/
+    text-align: center;     
+    text-shadow: 2px 2px 7px rgb(218, 213, 230);     /*Sombreamento do Texto*/
     color: #000000;
 }
 
