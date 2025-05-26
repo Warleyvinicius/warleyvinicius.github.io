@@ -340,8 +340,8 @@ padding-left: 0.25%;
     }
     #mainTitle{
          
-        text-shadow: 2px 2px 7px rgb(218, 213, 230);     /*Sombreamento do Texto*/
-        color: #000000;
+        text-shadow: 5px 2px 15px rgb(254, 254, 255);     /*Sombreamento do Texto*/
+        color: #01010a;
         }
     #main{
         background-color: rgb(224, 241, 241);
