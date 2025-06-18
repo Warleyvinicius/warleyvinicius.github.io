@@ -2,7 +2,7 @@
 Gerador de Curriculum com Conversor em PDF
 
 
-Este aplicativo (' Gerador de Curriculum) foi desenvolvido com o objetivo de ajudar os usuários a criar e exportar currículos profissionais em formato PDF de forma simples e prática. Valorizamos sua privacidade e garantimos a proteção dos seus dados pessoais.
+Este aplicativo (' Gerador de Curriculum ' ) foi desenvolvido com o objetivo de ajudar os usuários a criar e exportar currículos profissionais em formato PDF de forma simples e prática. Valorizamos sua privacidade e garantimos a proteção dos seus dados pessoais.
 
 1. Coleta de Dados
 Nosso aplicativo não coleta, armazena ou compartilha dados pessoais com servidores externos. Todas as informações inseridas pelo usuário (como nome, endereço, experiência profissional, formação acadêmica, etc.) são utilizadas exclusivamente para a geração do currículo e ficam armazenadas localmente no seu dispositivo.
